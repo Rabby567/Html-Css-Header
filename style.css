@@ -1,0 +1,365 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+
+.logo{
+  font-family: 'Rubik Wet Paint', cursive;
+}
+
+nav{
+ 
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+  z-index: 1;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image:linear-gradient(rgba(0,0,0,0.3),transparent),url(img/1223473.jpg);
+  background-size: cover;
+  background-position:  center;
+  padding: 0 8% ;
+  position: relative;
+}
+
+.text-box{
+  color: #fff;
+  position: absolute;
+  bottom: 20%;
+}
+.text-box p{
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.text-box h1{
+  font-size: 120px;
+  line-height: 150px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(img/back.png);
+  -webkit-background-clip: text;
+  animation: back 20s linear infinite;
+}
+@keyframes back{
+  100%{
+      background-position: 3000px 0;
+  }
+}
+
+.text-box h3{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.text-box .button{
+  margin-top: 30px;
+  
+}
+.text-box .button a{
+  position:relative;
+  display:inline-block;
+  overflow:hidden;
+  transition:0.2s;
+
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 2px solid #fff;
+ 
+}
+
+.text-box .button a:hover{
+  color:black;
+  background:#2196f3;
+  box-shadow:0 0 10px #2196f3, 0 0 10px #2196f3, 0 0 40px #2196f3;
+  transition:1s;
+}
+
+
+.images{
+  width: 45%;
+  height: 80%;
+ 
+  bottom: 0;
+  right: 100px;
+}
+
+.images img{
+  height: 80%;
+  position: absolute;
+  left: 65%;
+  bottom: 0;
+  transform: translateX(-40%);
+  transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+  bottom: 40px;
+}
+
+.images:hover .boy{
+  left: 62%;
+}
+
+.text-area{
+  width: 50%;
+  
+}
+
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+   
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+
+  .images{
+   
+    top:80px;
+    left: 10%;
+      
+  }
+  .images img{
+    height: 70%;
+    bottom: 10%;
+    left: 70%;
+    
+  }
+
+  .images:hover .shape{
+    bottom: 90px;
+  }
+  
+  .images:hover .boy{
+    left: 65%;
+  }
+
+
+ 
+}
+
+
+
+
+
+
+
+
+@media (max-width: 865px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 80vh;
+    background: #2c3e50;
+    top: 65px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 25px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+    z-index: 1;
+    position: absolute;
+   
+  }
+
+
+  .images{
+    
+    top:80px;
+    left: 10%;
+      
+  }
+  .images img{
+    height: 55%;
+    left: 40%;
+    top: 55vh;
+  }
+
+ 
+  .images:hover .boy{
+    left: 35%;
+  }
+
+  .container{
+    height: 122vh;
+  }
+
+  .text-box{
+    top: 10%;
+    left: 30%;
+  }
+  .text-box h1{
+    font-size: 90px;
+    line-height: 115px;
+    margin-left: 0px;
+  }
+  .text-box h3{
+    font-size: 25px;
+  }
+  .text-box p{
+    font-size:30px;
+  }
+
+  .text-box .button{
+    margin-top: 20px;
+  }
+
+  .text-box .button a{
+    font-size: 15px;
+  }
+  
+}
+
+
+
+@media (max-width: 500px){
+  .images{
+    
+    top:80px;
+    left: 10%;
+      
+  }
+  .images img{
+    
+    left: 38%;
+    height: 50%;
+    
+  }
+
+  
+ 
+  .images:hover .boy{
+    left: 35%;
+  }
+
+  .container{
+    height: 122vh;
+  }
+
+  .text-box{
+    top: 15%;
+    left: 20%;
+  }
+  .text-box h1{
+    font-size: 60px;
+    line-height: 80px;
+    margin-left: 0px;
+  }
+  .text-box h3{
+    font-size: 20px;
+  }
+  .text-box p{
+    font-size:25px;
+  }
+
+  .text-box .button{
+    margin-top: 20px;
+  }
+  
+
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 80vh;
+    background: #2c3e50;
+    top: 65px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+    z-index: 1;
+    position: absolute;
+   
+  }
+
+}
+
